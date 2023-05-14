@@ -197,3 +197,100 @@ Specific git-branch actions:
 didierd@Patrick-MacBook HTML % git branch -d test 
 Deleted branch test (was cbd2e70).
 didierd@Patrick-MacBook HTML % 
+ #### exercises 2
+ didierd@Patrick-MacBook HTML % git stash list
+didierd@Patrick-MacBook HTML % git add home.html
+didierd@Patrick-MacBook HTML % git stash
+Saved working directory and index state WIP on dev: cbd2e70 first commit
+didierd@Patrick-MacBook HTML % git stash list
+stash@{0}: WIP on dev: cbd2e70 first commit
+didierd@Patrick-MacBook HTML % git add about.html
+didierd@Patrick-MacBook HTML % git stash
+Saved working directory and index state WIP on dev: cbd2e70 first commit
+didierd@Patrick-MacBook HTML % git stash list
+stash@{0}: WIP on dev: cbd2e70 first commit
+stash@{1}: WIP on dev: cbd2e70 first commit
+didierd@Patrick-MacBook HTML % git add team.html
+didierd@Patrick-MacBook HTML % git stash
+Saved working directory and index state WIP on dev: cbd2e70 first commit
+didierd@Patrick-MacBook HTML % git stash list
+stash@{0}: WIP on dev: cbd2e70 first commit
+stash@{1}: WIP on dev: cbd2e70 first commit
+stash@{2}: WIP on dev: cbd2e70 first commit
+didierd@Patrick-MacBook HTML % git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   about.html
+
+Dropped stash@{1} (6bf3b34ace3b3b4ed215e6f7b64d5c70cb299d4a)
+didierd@Patrick-MacBook HTML % git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (b2443c124664d87582b6e6e270946993639642ff)
+didierd@Patrick-MacBook HTML % git add .
+didierd@Patrick-MacBook HTML % git commit -m  "stage commit" 
+[dev d32b850] stage commit
+ Committer: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 22 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+didierd@Patrick-MacBook HTML % git push origin dev
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 994.75 KiB | 12.75 MiB/s, done.
+Total 11 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mahorogit/Gym-Git-Exercises-Solutions.git
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/mahorogit/Gym-Git-Exercises-Solutions/pull/new/dev
+remote: 
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+ * [new branch]      dev -> dev
+didierd@Patrick-MacBook HTML % git push -u  origin dev
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+Everything up-to-date
+didierd@Patrick-MacBook HTML % git push -u  origin main
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/mahorogit/-Gym_prep_exercises.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+didierd@Patrick-MacBook HTML % git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+nothing to commit, working tree clean
+didierd@Patrick-MacBook HTML % git push origin dev  
+Everything up-to-date
+didierd@Patrick-MacBook HTML % git add .                    
+didierd@Patrick-MacBook HTML % git commit -m  "stage commits"
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+nothing to commit, working tree clean
+didierd@Patrick-MacBook HTML % 
