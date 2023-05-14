@@ -294,3 +294,6 @@ Your branch is up to date with 'origin/dev'.
 
 nothing to commit, working tree clean
 didierd@Patrick-MacBook HTML % 
+ didierd@Patrick-MacBook HTML % git reset --hard
+HEAD is now at d32b850 stage commit
+didierd@Patrick-MacBook HTML % 
