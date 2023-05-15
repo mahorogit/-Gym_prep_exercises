@@ -197,7 +197,7 @@ Specific git-branch actions:
 didierd@Patrick-MacBook HTML % git branch -d test 
 Deleted branch test (was cbd2e70).
 didierd@Patrick-MacBook HTML % 
- #### exercises 2
+ ### exercises 2
  didierd@Patrick-MacBook HTML % git stash list
 didierd@Patrick-MacBook HTML % git add home.html
 didierd@Patrick-MacBook HTML % git stash
@@ -297,3 +297,92 @@ didierd@Patrick-MacBook HTML %
  didierd@Patrick-MacBook HTML % git reset --hard
 HEAD is now at d32b850 stage commit
 didierd@Patrick-MacBook HTML % 
+##bundle 2 
+ ### Exercises 1
+ didierd@Patrick-MacBook HTML % git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+didierd@Patrick-MacBook HTML % git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+didierd@Patrick-MacBook HTML % git add services.html
+didierd@Patrick-MacBook HTML % git stash
+Saved working directory and index state WIP on ft/bundle-2: d32b850 stage commit
+didierd@Patrick-MacBook HTML % git stash pop
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   services.html
+
+Dropped refs/stash@{0} (cd721c1a4b966e6bd687b6b31a76b08d4329eab3)
+didierd@Patrick-MacBook HTML % git add service.html
+fatal: pathspec 'service.html' did not match any files
+didierd@Patrick-MacBook HTML % git add services.html
+didierd@Patrick-MacBook HTML % git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   services.html
+
+didierd@Patrick-MacBook HTML % git commit "create services page"
+error: pathspec 'create services page' did not match any file(s) known to git.
+didierd@Patrick-MacBook HTML % git commit -m "create services page"
+[ft/bundle-2 2efa60a] create services page
+ Committer: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+didierd@Patrick-MacBook HTML % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+didierd@Patrick-MacBook HTML % git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+didierd@Patrick-MacBook HTML % <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git exercises | services</title>
+</head>
+<body>
+    <h1>this is our services</h1>
+</body>
+</html>
+zsh: parse error near `\n'
+didierd@Patrick-MacBook HTML %  git push --set-upstream origin ft/bundle-2
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 477 bytes | 477.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mahorogit/Gym-Git-Exercises-Solutions.git
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/mahorogit/Gym-Git-Exercises-Solutions/pull/new/ft/bundle-2
+remote: 
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
