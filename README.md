@@ -297,7 +297,7 @@ didierd@Patrick-MacBook HTML %
  didierd@Patrick-MacBook HTML % git reset --hard
 HEAD is now at d32b850 stage commit
 didierd@Patrick-MacBook HTML % 
-##bundle 2 
+## bundle 2 
  ### Exercises 1
  didierd@Patrick-MacBook HTML % git checkout -b ft/bundle-2
 Switched to a new branch 'ft/bundle-2'
