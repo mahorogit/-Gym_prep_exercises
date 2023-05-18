@@ -386,3 +386,276 @@ remote:
 To https://github.com/mahorogit/-Gym_prep_exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
+ ##bundle 3 
+ ###Exercises 2
+ didierd@Patrick-MacBook HTML % git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+didierd@Patrick-MacBook HTML % git add --all
+didierd@Patrick-MacBook HTML % git commit -m "add faq pages"
+[ft/faq-page 0fb2528] add faq pages
+ Committer: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+didierd@Patrick-MacBook HTML % git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+didierd@Patrick-MacBook HTML % git push --set-upstream origin ft/faq-page
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 465 bytes | 465.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mahorogit/Gym-Git-Exercises-Solutions.git
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/mahorogit/Gym-Git-Exercises-Solutions/pull/new/ft/faq-page
+remote: 
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+Branch 'ft/faq-page' set up to track remote branch 'ft/faq-page' from 'origin'.
+didierd@Patrick-MacBook HTML % git log
+commit 0fb25287afb32211c4339d7e3a524c4b2b944c8d (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:15:44 2023 +0200
+
+    add faq pages
+
+commit 87205d5b12fa943e7928b7b2e31f62162650d741 (origin/ft/contact-page, ft/contact-page)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:08:51 2023 +0200
+
+    add contact pages
+
+commit c609a83458c50484f27dd388067aaadccf576b34
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 07:45:17 2023 +0200
+
+    add team pages
+didierd@Patrick-MacBook HTML % git revert c609a83458c50484f27dd388067aaadccf576b34
+[ft/faq-page 4b20400] Revert "add team pages"
+ Committer: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+didierd@Patrick-MacBook HTML % git push
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 279 bytes | 279.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mahorogit/Gym-Git-Exercises-Solutions.git
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+   0fb2528..4b20400  ft/faq-page -> ft/faq-page
+didierd@Patrick-MacBook HTML % git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+didierd@Patrick-MacBook HTML % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+didierd@Patrick-MacBook HTML % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+didierd@Patrick-MacBook HTML % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+didierd@Patrick-MacBook HTML % git add --all
+didierd@Patrick-MacBook HTML % git commit -m "changing home page" 
+[main 134f9da] changing home page
+ Committer: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+didierd@Patrick-MacBook HTML % git log
+commit 134f9da8bf1f009073ae5442f0888a396939be4b (HEAD -> main)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:39:05 2023 +0200
+
+    changing home page
+
+commit 6cc6cf3cc8819dbe22129e7c023abe4e481ed0ee (origin/main)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Mon May 15 20:26:49 2023 +0200
+
+    updated services changes
+
+commit 8dd58265b53d93635a08c2d18ce17ac8ef7abcde
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Mon May 15 18:37:46 2023 +0200
+
+    old services changes
+didierd@Patrick-MacBook HTML % git checkout -b ft/home-page-redesign
+fatal: A branch named 'ft/home-page-redesign' already exists.
+didierd@Patrick-MacBook HTML % git status                           
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+didierd@Patrick-MacBook HTML % git log
+commit 134f9da8bf1f009073ae5442f0888a396939be4b (HEAD -> main)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:39:05 2023 +0200
+
+    changing home page
+
+commit 6cc6cf3cc8819dbe22129e7c023abe4e481ed0ee (origin/main)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Mon May 15 20:26:49 2023 +0200
+
+    updated services changes
+
+commit 8dd58265b53d93635a08c2d18ce17ac8ef7abcde
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Mon May 15 18:37:46 2023 +0200
+
+    old services changes
+didierd@Patrick-MacBook HTML % git checkout ft/home-page-redesign 
+Switched to branch 'ft/home-page-redesign'
+didierd@Patrick-MacBook HTML % git rebase main
+First, rewinding head to replay your work on top of it...
+Applying: add team pages
+Applying: add contact pages
+Applying: add faq pages
+Applying: Revert "add team pages"
+didierd@Patrick-MacBook HTML % git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+didierd@Patrick-MacBook HTML % git log
+commit 888041557898d1d8472f1bd0c1d2c74b7244298d (HEAD -> ft/home-page-redesign)
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:21:44 2023 +0200
+
+    Revert "add team pages"
+    
+    This reverts commit c609a83458c50484f27dd388067aaadccf576b34.
+
+commit dbe3f5277222ed1bad50331ec916ed1a6d9c477e
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:15:44 2023 +0200
+
+    add faq pages
+
+commit 73b7b1bdd8036921bf86a5350ff88c1cc4cff1b2
+Author: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Date:   Tue May 16 08:08:51 2023 +0200
+
+didierd@Patrick-MacBook HTML % git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+didierd@Patrick-MacBook HTML % git add home.html
+didierd@Patrick-MacBook HTML % git commit -m "add home page menu"   
+[ft/home-page-redesign 5043e54] add home page menu
+ Committer: Mahoro Patrick <didierd@Patrick-MacBook.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+didierd@Patrick-MacBook HTML % git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+didierd@Patrick-MacBook HTML % git push --set-upstream origin ft/home-page-redesign
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 1.77 KiB | 453.00 KiB/s, done.
+Total 17 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mahorogit/Gym-Git-Exercises-Solutions.git
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/mahorogit/Gym-Git-Exercises-Solutions/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.
+didierd@Patrick-MacBook HTML % git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+didierd@Patrick-MacBook HTML % >....                                                                                                                                    
+
+didierd@Patrick-MacBook HTML % git push --set-upstream origin ft/home-page-redesign
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 1.77 KiB | 453.00 KiB/s, done.
+Total 17 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mahorogit/Gym-Git-Exercises-Solutions.git
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/mahorogit/Gym-Git-Exercises-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/mahorogit/-Gym_prep_exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.   
+zsh: parse error near `)'
