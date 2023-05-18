@@ -386,8 +386,8 @@ remote:
 To https://github.com/mahorogit/-Gym_prep_exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
- ##bundle 3 
- ###Exercises 2
+ ## bundle 3 
+ ### exercises 2
  didierd@Patrick-MacBook HTML % git checkout -b ft/faq-page
 Switched to a new branch 'ft/faq-page'
 didierd@Patrick-MacBook HTML % git add --all
